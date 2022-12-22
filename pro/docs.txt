@@ -1,0 +1,29 @@
+
+sample file dir : 
+
+logger implement Details:
+    in non excetable module:
+        import logging
+        logger = logging.getLogger(__name__)
+    in excutable module:
+        use sample dir - main.py file
+        excetable file naming convention always main.py or app.py
+
+For connection :
+
+    sys.path.append(
+    "/home/sonu/workspace/pro/db_conn"
+    )
+    from db_conn import DatabaseConnection
+
+For common utils file:
+
+    sys.path.append(
+    "/home/sonu/workspace/pro/utils")
+    rom common import get_logger
+
+For Secret file path or log config path
+    sys.path.append(
+    "/home/sonu/workspace/pro/component"
+    )
+    from static_path import LOG_CONFIG, SECRETS_PATH

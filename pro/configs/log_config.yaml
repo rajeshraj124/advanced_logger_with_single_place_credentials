@@ -1,0 +1,33 @@
+version: 1
+disable_existing_loggers: no
+formatters:
+    simple:
+        format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    verbose:
+        format: "[%(asctime)s]^;%(levelname)s^;%(lineno)d^;%(module)s^;%(funcName)s()^;%(message)s"
+handlers:
+    console:
+        class: logging.StreamHandler
+        level: INFO
+        formatter: simple
+        stream: ext://sys.stdout
+    file:
+        () : main.log_setup
+        level: INFO
+        formatter: verbose
+loggers:
+    root:
+        level: INFO
+        handlers: [console,file]
+        propagate: yes
+        qualname: root
+    app:
+        level: INFO
+        handlers: [file,console]
+        propagate: yes
+        qualname: app 
+    main:
+        level: INFO
+        handlers: [file,console]
+        propagate: yes
+        qualname: main   

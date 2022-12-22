@@ -1,0 +1,10 @@
+psycopg2-binary
+snowflake-connector-python
+pandas
+scikit-learn
+numpy
+python-box
+pyYAML
+ensure
+joblib
+boto3
